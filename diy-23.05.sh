@@ -65,6 +65,10 @@ git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mo
 # Alist
 git clone --depth=1 https://github.com/sbwml/luci-app-alist package/luci-app-alist
 
+
+git clone --depth=1  https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
+
+
 # Golang
 git clone --depth=1 https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
 
@@ -92,6 +96,7 @@ sed -i '/path/s/admin\///g' feeds/luci/applications/luci-app-nlbwmon/root/usr/sh
 sed -i 's/services\///g' feeds/luci/applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js
 sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
 sed -i '$a src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' feeds.conf.default
+
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
